@@ -23,9 +23,13 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 /* 以上を追加 */
 
 div.field_with_errors {
-  display: contents;
-
-  input {
+  display: contents； input {
     border: 2px solid red;
   }
+}
+
+.base-container {
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
 }
