@@ -22,12 +22,16 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 @import "@fortawesome/fontawesome-free/scss/regular";
 /* 以上を追加 */
 
-div.field_with_errors {
-  display: contents； input {
-    border: 2px solid red;
-  }
-}
+.field_with_errors {
+  display: contents;
 
+  // ***** 以下を修正 *****
+  input,
+  textarea {
+    @extend .is-invalid;
+  }
+  // ***** 以上を修正 *****
+}
 .base-container {
   @extend .container-fluid;
   max-width: var(--breakpoint-lg);
