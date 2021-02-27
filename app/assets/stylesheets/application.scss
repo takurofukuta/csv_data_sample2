@@ -22,10 +22,39 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 @import "@fortawesome/fontawesome-free/scss/regular";
 /* 以上を追加 */
 
-div.field_with_errors {
+.field_with_errors {
   display: contents;
 
-  input {
-    border: 2px solid red;
+  // ***** 以下を修正 *****
+  input,
+  textarea {
+    @extend .is-invalid;
   }
+  // ***** 以上を修正 *****
+}
+.base-container {
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
+}
+
+body {
+  padding-top: 56px;
+}
+
+th,
+td {
+  vertical-align: middle !important;
+}
+
+.break-word {
+  word-break: break-word;
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
 }
